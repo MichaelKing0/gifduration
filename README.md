@@ -27,25 +27,23 @@ To get the duration of an animated GIF file, supply it as an argument:
 
     gifduration atom-heart-mother.gif
 
-This will return something like:
+This will return the animation time (ms) in ms:
 
     atom-heart-mother.gif:
-    Total duration: 2000 ms (2.00 seconds)
-    ---
+    2000
 
 To also get the duration of each frame, use the `--verbose` (or `-v`) flag:
 
     gifduration --verbose atom-heart-mother.gif
 
-This will return something like:
+This will return the frame animation time (ms), with the total duration like:
 
     atom-heart-mother.gif:
-    Frame 1: 30 ms (0.03 seconds)
-    Frame 2: 80 ms (0.08 seconds)
-    Frame 3: 30 ms (0.03 seconds)
+    30
+    80
+    30
     […]
-    Total duration: 2000 ms (2.00 seconds)
-    ---
+    2000
 
 You can get the durations of several animated GIF files at once just by supplying all of them as arguments, for example:
 
@@ -53,15 +51,9 @@ You can get the durations of several animated GIF files at once just by supplyin
 
 This will return something like:
 
-    atom-heart-mother.gif:
-    Total duration: 2000 ms (2.00 seconds)
-    ---
-    meddle.gif:
-    Total duration: 100 ms (0.10 seconds)
-    ---
-    a-saucerful-of-secrets.gif:
-    Total duration: 0 ms (0.00 seconds)
-    ---
+    2000
+    100
+    0
 
 GIF files that are not animated will return a duration of zero. All other file types will return the message `Not a GIF image`.
 

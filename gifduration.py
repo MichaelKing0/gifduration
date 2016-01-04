@@ -72,11 +72,9 @@ def main(argv=None):
         else:
             if verbose:
                 for index, duration in enumerate(durations):
-                    print('Frame %d: %d ms (%0.2f seconds)' % (index + 1, duration, duration / 1000.0))
+                    print(duration)
             total_duration = sum(durations)
-            print('Total duration: %d ms (%0.2f seconds)' % (total_duration, total_duration / 1000.0))
-
-        print('---')
+            print(total_duration)
 
 if __name__ == '__main__':
     sys.exit(main())
